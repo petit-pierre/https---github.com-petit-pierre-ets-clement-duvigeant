@@ -32,6 +32,8 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <div id="google-reviews"> <h2>Avis Google My Business</h2> <script src="https://apis.google.com/js/client.js?onload=loadClient"></script> <script> function loadClient() { gapi.client.init({ apiKey: 'YOUR_API_KEY', discoveryUrl: 'https://mybusiness.googleapis.com/discovery/v4/apis/locations/1.0/rest' }).then(function() { makeRequest(); }, function(error) { console.error('Error initializing Google API Client:', error); }); } function makeRequest() { gapi.client.locations.reviews.list({ placeId: 'YOUR_PLACE_ID' }).then(function(response) { if (response.result.reviews) { displayReviews(response.result.reviews); } else { console.warn('No reviews found for this location.'); } }, function(error) { console.error('Error retrieving reviews:', error); }); } function displayReviews(reviews) { var html = ''; for (var i = 0; i < reviews.length; i++) { var review = reviews[i]; html += '<div class="review">'; html += ' <h3>' + review.authorName + '</h3>'; html += ' <p>' + review.rating + ' étoiles</p>'; html += ' <p>' + review.text + '</p>'; html += '</div>'; } document.getElementById('google-reviews').innerHTML = html; } </script> </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
