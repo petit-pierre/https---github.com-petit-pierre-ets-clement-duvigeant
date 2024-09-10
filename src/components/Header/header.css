@@ -1,0 +1,156 @@
+.header {
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  position: fixed;
+  background-color: white;
+  max-height: calc(285 * var(--res));
+}
+@media (min-width: 768px) {
+  .header {
+    max-height: calc(200 * var(--res));
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.header .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /*min-height: 60px;
+  max-height: 120px;*/
+}
+@media (min-width: 768px) {
+  .header .top {
+    width: 45%;
+    justify-content: flex-start;
+  }
+}
+.header .top .logo {
+  /*min-height: 60px;
+  max-height: 120px;
+  min-width: 60px;
+  max-width: 120px;*/
+  height: calc(200 * var(--res));
+  margin-left: 10px;
+}
+.header .top .logo img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .top .name {
+  width: calc(100% - 380 * var(--res));
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .header .top .name {
+    width: 100%;
+  }
+}
+.header .top .name h1 {
+  margin: 0;
+}
+.header .top .name p {
+  margin: 0;
+}
+.header .top .phone {
+  /*min-height: 40px;
+  max-height: 80px;
+  min-width: 40px;
+  max-width: 80px;*/
+  height: calc(180 * var(--res));
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .header .top .phone {
+    display: none;
+  }
+}
+.header .top .phone img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .bottom {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header .bottom {
+    width: 55%;
+  }
+}
+.header .bottom nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .header .bottom nav p {
+    font-size: calc(12 * var(--res));
+  }
+}
+.header .bottom nav .button {
+  width: calc(25% - 10px);
+  height: calc(70 * var(--res));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  margin: 5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .header .bottom nav .button {
+    width: calc(19% - 12px);
+  }
+}
+.header .bottom nav .active {
+  background-color: red;
+  color: white;
+}
+.header .bottom nav .phone {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  height: calc(70 * var(--res));
+}
+@media (max-width: 768px) {
+  .header .bottom nav .phone {
+    display: none;
+  }
+}
+.header .bottom nav .phone img {
+  margin: auto;
+  max-height: 60%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .bottom nav .phone p {
+  margin: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.headerField {
+  height: 140px;
+}
+@media (min-width: 458px) {
+  .headerField {
+    height: 210px;
+  }
+}
+@media (min-width: 768px) {
+  .headerField {
+    height: 180px;
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,24 @@
+html{
+    --res: calc(0.01 * 10vmin)
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    h1{
+        font-size: calc(30 * var(--res));
+    }
+    p{
+        font-size: calc(20 * var(--res));
+        font-weight: bold;
+    }
+  }
+  /* {
+    outline: 1px solid red;
+}*/

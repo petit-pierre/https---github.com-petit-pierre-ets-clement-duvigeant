@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  --res: calc(0.01 * 10vmin) ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
 }
+body h1 {
+  font-size: calc(30 * var(--res));
+}
+body p {
+  font-size: calc(20 * var(--res));
+  font-weight: bold;
+}
+
+/* {
+    outline: 1px solid red;
+}*//*# sourceMappingURL=index.css.map */
