@@ -1,8 +1,21 @@
 .home{
-    //background-color: aqua;
-    .map{
-        border-radius: 10px;
-        width: 30%;
-        height: 30dvw;
+    height: 2000px;
+    .ancre{
+        position: relative;
     }
+    .id{
+        position: absolute;
+        top: -90px;
+        @media (max-width: 768px) {
+            top: -150px;
+        }
+    }
+
+
+}
+.hidden{
+    display: none;
+}
+.cgv{
+    height: 50px;
 }

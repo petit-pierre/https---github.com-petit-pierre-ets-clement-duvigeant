@@ -1,5 +1,23 @@
-.home .map {
-  border-radius: 10px;
-  width: 30%;
-  height: 30dvw;
+.home {
+  height: 2000px;
+}
+.home .ancre {
+  position: relative;
+}
+.home .id {
+  position: absolute;
+  top: -90px;
+}
+@media (max-width: 768px) {
+  .home .id {
+    top: -150px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.cgv {
+  height: 50px;
 }/*# sourceMappingURL=home.css.map */

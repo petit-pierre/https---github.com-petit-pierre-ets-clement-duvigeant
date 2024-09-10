@@ -5,19 +5,30 @@ html {
 body {
   margin: 0;
   font-family: "Montserrat";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
   line-height: 1;
   background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
   background-size: cover;
   background-attachment: fixed;
+  color: black;
 }
 body h1 {
-  font-size: calc(30 * var(--res));
+  font-size: calc(20 * var(--res));
+}
+@media (max-width: 768px) {
+  body h1 {
+    font-size: calc(40 * var(--res));
+  }
 }
 body p {
-  font-size: calc(20 * var(--res));
-  font-weight: bold;
+  font-size: calc(18 * var(--res));
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  body p {
+    font-size: calc(16 * var(--res));
+  }
 }
 
 /* {

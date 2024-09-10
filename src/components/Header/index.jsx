@@ -3,6 +3,10 @@ import "./header.css";
 
 function Header() {
   function clicked(evt) {
+    if (!document.querySelector(".cgv").className.includes("hidden")) {
+      document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".cgv").classList.add("hidden");
+    }
     const links = document.querySelectorAll(".active");
     if (links !== null) {
       for (let link of links) {
@@ -18,6 +22,10 @@ function Header() {
     }
   }
   function clickedLogo() {
+    if (!document.querySelector(".cgv").className.includes("hidden")) {
+      document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".cgv").classList.add("hidden");
+    }
     const links = document.querySelectorAll(".active");
     if (links !== null) {
       for (let link of links) {
@@ -29,9 +37,14 @@ function Header() {
     <div className="headerField">
       <div className="header">
         <div className="top">
-          <div className="logo" onClick={(evt) => clickedLogo()}>
-            <Link to="coucou" smooth="true" onClick={(evt) => clickedLogo()}>
-              <img src="./assets/logo.png" alt="logo"></img>
+          <div className="logo" onClick={() => clickedLogo()}>
+            <Link
+              to="acceuil"
+              smooth="true"
+              onClick={() => clickedLogo()}
+              tabIndex={1}
+            >
+              <img src="./assets/logo-header.png" alt="logo"></img>
             </Link>
           </div>
           <div className="name">
@@ -51,9 +64,9 @@ function Header() {
             </a>
             <div className="button red">
               <Link
-                to="coucou"
+                to="eau"
                 smooth={true}
-                name="prout"
+                tabIndex={4}
                 onClick={(evt) => clicked(evt)}
               >
                 <div>
@@ -62,21 +75,36 @@ function Header() {
               </Link>
             </div>
             <div className="button blue">
-              <Link to="coucou" smooth={true} onClick={(evt) => clicked(evt)}>
+              <Link
+                to="vmc"
+                smooth={true}
+                onClick={(evt) => clicked(evt)}
+                tabIndex={3}
+              >
                 <div>
                   <p>V.M.C</p>
                 </div>
               </Link>
             </div>
             <div className="button red">
-              <Link to="coucou" smooth={true} onClick={(evt) => clicked(evt)}>
+              <Link
+                to="chauffage"
+                smooth={true}
+                onClick={(evt) => clicked(evt)}
+                tabIndex={2}
+              >
                 <div>
                   <p>Chauffage</p>
                 </div>
               </Link>
             </div>
             <div className="button blue">
-              <Link to="coucou" smooth={true} onClick={(evt) => clicked(evt)}>
+              <Link
+                to="climatisation"
+                smooth={true}
+                onClick={(evt) => clicked(evt)}
+                tabIndex={1}
+              >
                 <div>
                   <p>Climatisation</p>
                 </div>
