@@ -1,9 +1,8 @@
+import { Link } from "react-scroll";
 import "./footer.css";
 
 function Footer() {
-  let cvgs = false;
   function cgv() {
-    cvgs = !cvgs;
     if (
       !document.querySelector(".cgv").className.includes("hidden") ||
       document.querySelector(".cgv") !== null
@@ -13,6 +12,12 @@ function Footer() {
     } else {
       document.querySelector(".cgv").classList.add("hidden");
       document.querySelector(".content").classList.remove("hidden");
+    }
+    const links = document.querySelectorAll(".active");
+    if (links !== null) {
+      for (let link of links) {
+        link.classList.remove("active");
+      }
     }
   }
   return (
@@ -43,9 +48,11 @@ function Footer() {
         </a>
       </div>
       <div className="legal">
-        <p className="cgvLink" onClick={() => cgv()}>
-          Mentions legals et C.G.V
-        </p>
+        <Link to="cgv" smooth="true">
+          <p className="cgvLink" onClick={() => cgv()}>
+            Mentions legals et C.G.V
+          </p>
+        </Link>
 
         <a
           href="https://fr.freepik.com/"
