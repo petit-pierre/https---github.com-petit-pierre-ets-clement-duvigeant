@@ -1,14 +1,27 @@
 .home{
+
+    padding: 2%;
+    margin: 0;
+    width: 96%;
+
     .ancre{
         position: relative;
     }
     .id{
         position: absolute;
-        top: -90px;
+        top: -80px;
         @media (max-width: 768px) {
-            top: -150px;
+            top: -140px;
         }
     }
+    .text{
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        //width: 96%;
+        //margin: auto;
+    }
+
 }
 .hidden{
     display: none;

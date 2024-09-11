@@ -23,8 +23,6 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  /*min-height: 60px;
-  max-height: 120px;*/
 }
 @media (min-width: 768px) {
   .header .top {
@@ -33,10 +31,6 @@
   }
 }
 .header .top .logo {
-  /*min-height: 60px;
-  max-height: 120px;
-  min-width: 60px;
-  max-width: 120px;*/
   height: 60px;
   width: 313px;
   margin: 10px;
@@ -70,10 +64,6 @@
   margin: 0;
 }
 .header .top .phone {
-  /*min-height: 40px;
-  max-height: 80px;
-  min-width: 40px;
-  max-width: 80px;*/
   height: 70px;
   margin-right: 10px;
   display: flex;
@@ -116,6 +106,7 @@
   border-radius: 10px;
   margin: 5px;
   color: black;
+  transition: 1s;
 }
 @media (min-width: 768px) {
   .header .bottom nav .button {
@@ -178,10 +169,10 @@
 }
 
 .headerField {
-  height: 150px;
+  height: 140px;
 }
 @media (min-width: 768px) {
   .headerField {
-    height: 90px;
+    height: 80px;
   }
 }/*# sourceMappingURL=header.css.map */
