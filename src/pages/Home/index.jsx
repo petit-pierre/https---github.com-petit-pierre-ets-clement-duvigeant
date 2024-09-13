@@ -92,7 +92,6 @@ function Home() {
   }, []);
   return (
     <main>
-      {" "}
       <div className="ancre">
         <span id="acceuil" className="id"></span>
         <span className="observer" ref={accueil}></span>
