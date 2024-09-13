@@ -23,21 +23,19 @@ function Home() {
   useEffect(() => {
     const observerClim = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log(entries[0]);
         const links = document.querySelectorAll(".active");
         if (links !== null) {
           for (let link of links) {
             link.classList.remove("active");
           }
         }
-        document.querySelectorAll(".button")[0].classList.add("active");
+        document.querySelectorAll(".button")[2].classList.add("active");
       }
     });
     observerClim.observe(document.querySelector(".climatisation"));
 
     const observerChauffage = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log(entries[0]);
         const links = document.querySelectorAll(".active");
         if (links !== null) {
           for (let link of links) {
@@ -51,21 +49,19 @@ function Home() {
 
     const observerVmc = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log(entries[0]);
         const links = document.querySelectorAll(".active");
         if (links !== null) {
           for (let link of links) {
             link.classList.remove("active");
           }
         }
-        document.querySelectorAll(".button")[2].classList.add("active");
+        document.querySelectorAll(".button")[0].classList.add("active");
       }
     });
     observerVmc.observe(vmc.current);
 
     const observerEau = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log(entries[0]);
         const links = document.querySelectorAll(".active");
         if (links !== null) {
           for (let link of links) {
@@ -79,7 +75,6 @@ function Home() {
 
     const observerAccueil = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log(entries[0]);
         const links = document.querySelectorAll(".active");
         if (links !== null) {
           for (let link of links) {
@@ -108,6 +103,24 @@ function Home() {
           <div className="section">
             <Chauffage></Chauffage>
           </div>
+
+          <div className="ancre">
+            <span id="climatisation" className="id"></span>
+            <span className="observer climatisation" ref={climatisation}></span>
+          </div>
+
+          <div className="section">
+            <Climatisation></Climatisation>
+          </div>
+
+          <div className="ancre">
+            <span id="eau" className="id"></span>
+            <span className="observer" ref={eau}></span>
+          </div>
+          <div className="section">
+            <Eau></Eau>
+          </div>
+
           <div className="ancre">
             <span id="vmc" className="id"></span>
             <div className="observer">
@@ -116,20 +129,6 @@ function Home() {
           </div>
           <div className="section">
             <Vmc></Vmc>
-          </div>
-          <div className="ancre">
-            <span id="eau" className="id"></span>
-            <span className="observer" ref={eau}></span>
-          </div>
-          <div className="section">
-            <Eau></Eau>
-          </div>
-          <div className="ancre">
-            <span id="climatisation" className="id"></span>
-            <span className="observer climatisation" ref={climatisation}></span>
-          </div>
-          <div className="section">
-            <Climatisation></Climatisation>
           </div>
         </div>
         <div className="cgv hidden">

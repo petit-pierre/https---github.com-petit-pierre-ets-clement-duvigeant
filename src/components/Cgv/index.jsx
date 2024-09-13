@@ -18,7 +18,7 @@ function Cgv() {
           data-aos-easing="ease-in-sine"
         >
           <strong>Editeur</strong>
-          <p>Ets Clément Duvigeant</p>
+          <p>EI Clément Duvigeant</p>
           <p>11 impasse de la naouco</p>
           <p>81290 Escoussens</p>
           <p>siret: 45120708800035</p>

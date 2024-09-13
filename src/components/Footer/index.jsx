@@ -51,7 +51,12 @@ function Footer() {
       </div>
       <div className="legal">
         <Link to="cgv" smooth="true">
-          <p className="cgvLink" onClick={() => cgv()}>
+          <p
+            className="cgvLink"
+            onClick={() => cgv()}
+            tabIndex={0}
+            onKeyDown={() => cgv()}
+          >
             Mentions legales et C.G.V
           </p>
         </Link>

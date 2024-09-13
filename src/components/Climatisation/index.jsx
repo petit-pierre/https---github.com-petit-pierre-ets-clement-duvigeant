@@ -20,6 +20,7 @@ function Climatisation() {
             ></img>
           </div>
           <a
+            tabIndex={-1}
             href="https://www.qualit-enr.org/qualifications/ventilation-plus/"
             target="_blank"
             rel="noopener noreferrer"
