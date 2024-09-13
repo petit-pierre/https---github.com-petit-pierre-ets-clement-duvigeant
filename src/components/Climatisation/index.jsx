@@ -91,7 +91,7 @@ function Climatisation() {
           </div>
           <div className="logoMax">
             <a
-              href="https://www.qualit-enr.org/qualifications/ventilation-plus/"
+              href="https://www.qualit-enr.org/qualifications/qualisol/"
               target="_blank"
               rel="noopener noreferrer"
               className="logoVentilationLink"
@@ -99,7 +99,7 @@ function Climatisation() {
               data-aos-duration="2000"
             >
               <img
-                src="https://l-araignee.net/ets-clement-duvigeant/assets/ventilation.png"
+                src="https://l-araignee.net/ets-clement-duvigeant/assets/qualipac.png"
                 alt="logo rge ventilation"
                 className="logoVentilation"
               ></img>

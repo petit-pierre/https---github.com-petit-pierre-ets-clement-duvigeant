@@ -1,7 +1,7 @@
 .climatisation{
     width: 100%;
     overflow: hidden;
-    margin-bottom: 0;
+    padding-bottom: 50px;
     .contentDesktop {
         display: flex;
         flex-direction: row;
@@ -103,6 +103,7 @@
     }
     .logoVentilation{
         margin: auto;
+        margin-top: -20%;
         display: block;
         //margin-top: 2%;
         width: 100%;

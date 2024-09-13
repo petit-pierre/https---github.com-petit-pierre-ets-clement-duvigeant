@@ -18,6 +18,13 @@
     flex-direction: row;
   }
 }
+@media (max-width: 768px) {
+  .header .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 .header .top {
   display: flex;
   flex-direction: row;
@@ -142,7 +149,7 @@
   transition: 1s;
 }
 .header .bottom nav .phone {
-  margin: 5px;
+  margin: 2.5px;
   margin-right: 10px;
   display: flex;
   flex-direction: row;
@@ -166,6 +173,15 @@
   margin: auto;
   margin-left: 5px;
   margin-right: 5px;
+}
+.header .mail p {
+  font-size: calc(10 * var(--res));
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .header .mail p {
+    font-size: calc(18 * var(--res));
+  }
 }
 
 .headerField {

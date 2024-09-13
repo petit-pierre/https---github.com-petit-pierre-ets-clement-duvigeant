@@ -13,6 +13,13 @@
         display: flex;
         flex-direction: row;
     }
+    .contact{
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+                    }
+    }
     .top{
         display: flex;
         flex-direction: row;
@@ -128,7 +135,7 @@
                 @media (max-width: 768px) {
                     display: none;
                 }
-                margin: 5px;
+                margin: 2.5px;
                 margin-right: 10px;
                 display: flex;
                 flex-direction: row;
@@ -149,6 +156,21 @@
             }
         }
 
+    }
+    .mail{
+        //margin-top: -5px;
+        @media (max-width: 768px) {
+            img{
+                //width: 20px;
+            }}
+        p{
+            font-size: calc(10 * var(--res));
+            font-weight: 500;
+            //font-weight: bold;
+            @media (max-width: 768px) {
+                font-size: calc(18 * var(--res));
+            }
+        }
     }
 }
 .headerField{

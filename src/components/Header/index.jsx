@@ -57,22 +57,39 @@ function Header() {
             <p>Evaluation thermique avant travaux</p>
             <p>installations, entretiens et dépannages</p>
           </div>
-          <a href="tel:+33781115430" className="phone">
-            <img
-              src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
-              alt="logo"
-            ></img>
-          </a>
-        </div>
-        <div className="bottom">
-          <nav>
+          <div className="contact">
+            <a href="tel:+33781115430" className="phone mail">
+              <img
+                src="https://l-araignee.net/ets-clement-duvigeant/assets/mail.png"
+                alt="logo"
+              ></img>
+            </a>
             <a href="tel:+33781115430" className="phone">
               <img
                 src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
                 alt="logo"
               ></img>
-              <p>07.81.11.54.30</p>
             </a>
+          </div>
+        </div>
+        <div className="bottom">
+          <nav>
+            <div className="contact">
+              <a href="tel:+33781115430" className="phone">
+                <img
+                  src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
+                  alt="logo"
+                ></img>
+                <p>07.81.11.54.30</p>
+              </a>
+              <a href="tel:+33781115430" className="phone mail">
+                <img
+                  src="https://l-araignee.net/ets-clement-duvigeant/assets/mail.png"
+                  alt="logo"
+                ></img>
+                <p>c-duvigeant@laposte.net</p>
+              </a>
+            </div>
             <div className="button blue">
               <Link
                 to="climatisation"
