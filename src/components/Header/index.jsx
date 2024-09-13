@@ -5,6 +5,7 @@ function Header() {
   function clicked(evt) {
     if (!document.querySelector(".cgv").className.includes("hidden")) {
       document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".accueilContent").classList.remove("hidden");
       document.querySelector(".cgv").classList.add("hidden");
     }
     const links = document.querySelectorAll(".active");
@@ -24,6 +25,7 @@ function Header() {
   function clickedLogo() {
     if (!document.querySelector(".cgv").className.includes("hidden")) {
       document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".accueilContent").classList.remove("hidden");
       document.querySelector(".cgv").classList.add("hidden");
     }
     const links = document.querySelectorAll(".active");
@@ -44,7 +46,10 @@ function Header() {
               onClick={() => clickedLogo()}
               tabIndex={1}
             >
-              <img src="./assets/logo-header.png" alt="logo"></img>
+              <img
+                src="https://l-araignee.net/ets-clement-duvigeant/assets/logo-header.png"
+                alt="logo"
+              ></img>
             </Link>
           </div>
           <div className="name">
@@ -53,15 +58,33 @@ function Header() {
             <p>installations, entretiens et dépannages</p>
           </div>
           <a href="tel:+33781115430" className="phone">
-            <img src="./assets/tel.png" alt="logo"></img>
+            <img
+              src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
+              alt="logo"
+            ></img>
           </a>
         </div>
         <div className="bottom">
           <nav>
             <a href="tel:+33781115430" className="phone">
-              <img src="./assets/tel.png" alt="logo"></img>
+              <img
+                src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
+                alt="logo"
+              ></img>
               <p>07.81.11.54.30</p>
             </a>
+            <div className="button blue">
+              <Link
+                to="climatisation"
+                smooth={true}
+                onClick={(evt) => clicked(evt)}
+                tabIndex={1}
+              >
+                <div>
+                  <p>Climatisation</p>
+                </div>
+              </Link>
+            </div>
             <div className="button red">
               <Link
                 to="eau"
@@ -95,18 +118,6 @@ function Header() {
               >
                 <div>
                   <p>Chauffage</p>
-                </div>
-              </Link>
-            </div>
-            <div className="button blue">
-              <Link
-                to="climatisation"
-                smooth={true}
-                onClick={(evt) => clicked(evt)}
-                tabIndex={1}
-              >
-                <div>
-                  <p>Climatisation</p>
                 </div>
               </Link>
             </div>

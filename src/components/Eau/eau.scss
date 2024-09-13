@@ -1,3 +1,6 @@
 .eau{
-    
+    width: 100%;
+    .text{
+        width: calc(100% - 20px);
+    }
 }

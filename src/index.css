@@ -21,13 +21,37 @@ body h1 {
     font-size: calc(40 * var(--res));
   }
 }
+body h2 {
+  color: white;
+}
+body #google-reviews h2 {
+  color: black;
+}
 body p {
-  font-size: calc(18 * var(--res));
+  font-size: calc(20 * var(--res));
   font-weight: 500;
 }
 @media (max-width: 768px) {
   body p {
-    font-size: calc(16 * var(--res));
+    font-size: calc(24 * var(--res));
+  }
+}
+body li {
+  font-size: calc(20 * var(--res));
+  font-weight: 500;
+  margin-top: 10px;
+  /*@media (max-width: 768px) {
+      font-size: calc(16 * var(--res));
+  }*/
+}
+@media (max-width: 768px) {
+  body li {
+    font-size: calc(24 * var(--res));
+  }
+}
+@media (min-width: 768px) {
+  body main {
+    margin-bottom: -100px;
   }
 }
 

@@ -1,1 +1,6 @@
-/*# sourceMappingURL=eau.css.map */
+.eau {
+  width: 100%;
+}
+.eau .text {
+  width: calc(100% - 20px);
+}/*# sourceMappingURL=eau.css.map */

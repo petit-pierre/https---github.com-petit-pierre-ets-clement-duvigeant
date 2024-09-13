@@ -18,14 +18,40 @@ body {
             font-size: calc(40 * var(--res));
         }
     }
+    h2{
+        color: white;
+    }
+    #google-reviews{
+        h2{
+            color: black ;
+        }
+      }
     p{
-        font-size: calc(18 * var(--res));
+        font-size: calc(20 * var(--res));
         font-weight: 500;
         //font-weight: bold;
         @media (max-width: 768px) {
-            font-size: calc(16 * var(--res));
+            font-size: calc(24 * var(--res));
         }
     }
+    li{
+        font-size: calc(20 * var(--res));
+        font-weight: 500;
+        margin-top: 10px;
+        //font-weight: bold;
+        /*@media (max-width: 768px) {
+            font-size: calc(16 * var(--res));
+        }*/
+        @media (max-width: 768px) {
+            font-size: calc(24 * var(--res));
+        }
+    }
+    @media (min-width: 768px) {
+        main{
+            margin-bottom: -100px;
+        }
+    }
+
   }
   /* {
     outline: 1px solid red;

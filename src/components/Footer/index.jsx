@@ -8,10 +8,12 @@ function Footer() {
       document.querySelector(".cgv") !== null
     ) {
       document.querySelector(".content").classList.add("hidden");
+      document.querySelector(".accueilContent").classList.add("hidden");
       document.querySelector(".cgv").classList.remove("hidden");
     } else {
       document.querySelector(".cgv").classList.add("hidden");
       document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".accueilContent").classList.remove("hidden");
     }
     const links = document.querySelectorAll(".active");
     if (links !== null) {
@@ -50,7 +52,7 @@ function Footer() {
       <div className="legal">
         <Link to="cgv" smooth="true">
           <p className="cgvLink" onClick={() => cgv()}>
-            Mentions legals et C.G.V
+            Mentions legales et C.G.V
           </p>
         </Link>
 
@@ -59,11 +61,11 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p>Images from Freepic</p>{" "}
+          <p>Images: Freepic</p>{" "}
         </a>
         <p>Nous ne faisons pas de cookies</p>
-        <p>Horaire:</p>
-        <p>Lun-Ven 8h00-18h00</p>
+        <p>Horaires:</p>
+        <p>Lundi au Vendredi de 8h00 à 18h00</p>
       </div>
     </div>
   );
