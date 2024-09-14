@@ -90,7 +90,7 @@ function Header() {
             <p>installations, entretiens et dépannages</p>
           </div>
           <div className="contact">
-            <a href="tel:+33781115430" className="phone mail">
+            <a href="mailto:c-duvigeant@laposte.net" className="phone mail">
               <img
                 src="https://l-araignee.net/ets-clement-duvigeant/assets/mail.png"
                 alt="logo"
@@ -114,7 +114,7 @@ function Header() {
                 ></img>
                 <p>07.81.11.54.30</p>
               </a>
-              <a href="tel:+33781115430" className="phone mail">
+              <a href="mailto:c-duvigeant@laposte.net" className="phone mail">
                 <img
                   src="https://l-araignee.net/ets-clement-duvigeant/assets/mail.png"
                   alt="logo"
