@@ -1,61 +1,63 @@
-html{
-    --res: calc(0.01 * 10vmin)
+html {
+  // --res: calc(0.01 * 10vmin)
+}
+* {
+  border: 1px solid red;
 }
 
 body {
-    //width: 100%;
-    //overflow: hidden;
-    position: relative;
-    margin: 0;
-    font-family: "Montserrat";
-    /*-webkit-font-smoothing: antialiased;
+  //width: 100%;
+  //overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat";
+  /*-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;*/
-    line-height: 1;
-    background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
-    background-size: cover;
-    background-attachment: fixed;
-    color: black;
-    h1{
-        font-size: calc(20 * var(--res));
-        @media (max-width: 768px) {
-            font-size: calc(40 * var(--res));
-        }
+  line-height: 1;
+  background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  h1 {
+    font-size: calc(20 * var(--res));
+    @media (max-width: 768px) {
+      font-size: calc(40 * var(--res));
     }
-    h2{
-        color: white;
+  }
+  h2 {
+    color: white;
+  }
+  #google-reviews {
+    h2 {
+      color: black;
     }
-    #google-reviews{
-        h2{
-            color: black ;
-        }
-      }
-    p{
-        font-size: calc(20 * var(--res));
-        font-weight: 500;
-        //font-weight: bold;
-        @media (max-width: 768px) {
-            font-size: calc(24 * var(--res));
-        }
+  }
+  p {
+    font-size: 1vw;
+    font-weight: 500;
+    //font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: calc(24 * var(--res));
     }
-    li{
-        font-size: calc(20 * var(--res));
-        font-weight: 500;
-        margin-top: 10px;
-        //font-weight: bold;
-        /*@media (max-width: 768px) {
+  }
+  li {
+    font-size: calc(20 * var(--res));
+    font-weight: 500;
+    margin-top: 10px;
+    //font-weight: bold;
+    /*@media (max-width: 768px) {
             font-size: calc(16 * var(--res));
         }*/
-        @media (max-width: 768px) {
-            font-size: calc(24 * var(--res));
-        }
+    @media (max-width: 768px) {
+      font-size: calc(24 * var(--res));
     }
-    @media (min-width: 768px) {
-        main{
-            margin-bottom: -100px;
-        }
-    }
-
   }
-  /* {
+  @media (min-width: 768px) {
+    main {
+      margin-bottom: -100px;
+    }
+  }
+}
+/* {
     outline: 1px solid red;
 }*/

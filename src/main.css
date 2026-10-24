@@ -1,5 +1,5 @@
-html {
-  --res: calc(0.01 * 10vmin) ;
+* {
+  border: 1px solid red;
 }
 
 body {
@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: "Montserrat";
   /*-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
+    -moz-osx-font-smoothing: grayscale;*/
   line-height: 1;
   background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
   background-size: cover;
@@ -29,7 +29,7 @@ body #google-reviews h2 {
   color: black;
 }
 body p {
-  font-size: calc(20 * var(--res));
+  font-size: 1vw;
   font-weight: 500;
 }
 @media (max-width: 768px) {
@@ -42,8 +42,8 @@ body li {
   font-weight: 500;
   margin-top: 10px;
   /*@media (max-width: 768px) {
-      font-size: calc(16 * var(--res));
-  }*/
+          font-size: calc(16 * var(--res));
+      }*/
 }
 @media (max-width: 768px) {
   body li {
