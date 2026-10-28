@@ -45,12 +45,19 @@ body {
       font-size: 2.5vw;
     }
   }
-  strong {
+  button {
+    cursor: pointer;
+  }
+  strong,
+  h3 {
     font-size: 1.2vw;
     font-weight: bold;
     @media screen and (aspect-ratio<1/1) {
       font-size: 3vw;
     }
+  }
+  ul {
+    padding-left: 2vw;
   }
   span {
     font-size: 0.6vw;
@@ -62,13 +69,11 @@ body {
   li {
     font-size: calc(20 * var(--res));
     font-weight: 500;
-    margin-top: 10px;
-    //font-weight: bold;
-    /*@media (max-width: 768px) {
-            font-size: calc(16 * var(--res));
-        }*/
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
     @media screen and (aspect-ratio<1/1) {
-      font-size: calc(24 * var(--res));
+      font-size: 2.5vw;
     }
   }
   @media screen and (aspect-ratio<1/1) {

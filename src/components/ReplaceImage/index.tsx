@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useContent } from "../../contexts/ContentContext";
 import "./replaceimage.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ReplaceImage({ id, addMessage, menuStyle = "" }) {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
 
@@ -40,7 +42,10 @@ export default function ReplaceImage({ id, addMessage, menuStyle = "" }) {
       addMessage("Photo remplacée avec succes.");
     } catch (error) {
       addMessage("Mise a jour de la photo a échoué.");
-      console.error(error);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     } finally {
       setUploading(false);
       e.target.value = "";

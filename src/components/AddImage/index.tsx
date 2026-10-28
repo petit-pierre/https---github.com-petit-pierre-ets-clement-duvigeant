@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useContent } from "../../contexts/ContentContext";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function AddImage({ location, addMessage }) {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
 

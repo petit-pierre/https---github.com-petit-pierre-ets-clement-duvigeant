@@ -98,26 +98,19 @@
           //height: 100%;
           //top: 0;
           //left: 0;
-          transition: 5s;
+          will-change: transform;
+          transition: transform 5s ease;
           object-fit: cover;
+          // transform: translateZ(0);
         }
         .img1:hover {
-          width: 104%;
-          margin-left: -2%;
-          margin-top: -2%;
-          transition: 5s;
+          transform: perspective(500px) translateZ(40px);
         }
         .img2:hover {
-          width: 104%;
-          margin-left: -2%;
-          margin-top: -2%;
-          transition: 5s;
+          transform: perspective(500px) translateZ(40px);
         }
         .img3:hover {
-          width: 104%;
-          margin-left: -2%;
-          margin-top: -2%;
-          transition: 5s;
+          transform: perspective(500px) translateZ(40px);
         }
       }
     }

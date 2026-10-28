@@ -98,25 +98,17 @@
 }
 .chauffage .content .images div img {
   width: 100%;
-  transition: 5s;
+  will-change: transform;
+  transition: transform 5s ease;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .chauffage .content .images div .img1:hover {
-  width: 104%;
-  margin-left: -2%;
-  margin-top: -2%;
-  transition: 5s;
+  transform: perspective(500px) translateZ(40px);
 }
 .chauffage .content .images div .img2:hover {
-  width: 104%;
-  margin-left: -2%;
-  margin-top: -2%;
-  transition: 5s;
+  transform: perspective(500px) translateZ(40px);
 }
 .chauffage .content .images div .img3:hover {
-  width: 104%;
-  margin-left: -2%;
-  margin-top: -2%;
-  transition: 5s;
+  transform: perspective(500px) translateZ(40px);
 }/*# sourceMappingURL=chauffage.css.map */
