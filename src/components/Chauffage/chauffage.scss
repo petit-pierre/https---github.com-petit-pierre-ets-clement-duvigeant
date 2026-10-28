@@ -38,7 +38,7 @@
   .content {
     display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
+    @media screen and (aspect-ratio<1/1) {
       flex-direction: column;
     }
 
@@ -48,7 +48,7 @@
       flex-direction: column;
       justify-content: space-between;
       margin-right: 2%;
-      @media (max-width: 768px) {
+      @media screen and (aspect-ratio<1/1) {
         width: 100%;
         //margin: auto;
       }
@@ -72,7 +72,7 @@
       flex-wrap: wrap;
       flex-direction: column;
       //position: relative;
-      @media (max-width: 768px) {
+      @media screen and (aspect-ratio<1/1) {
         width: 100%;
         margin-left: 0;
         flex-direction: row;
@@ -88,7 +88,7 @@
         border-radius: 10px;
         margin-bottom: 6%;
         overflow: hidden;
-        @media (max-width: 768px) {
+        @media screen and (aspect-ratio<1/1) {
           width: 30%;
           margin: auto;
         }

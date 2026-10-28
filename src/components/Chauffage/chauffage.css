@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   .chauffage .content {
     flex-direction: column;
   }
@@ -51,7 +51,7 @@
   justify-content: space-between;
   margin-right: 2%;
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   .chauffage .content .left {
     width: 100%;
   }
@@ -73,7 +73,7 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   .chauffage .content .images {
     width: 100%;
     margin-left: 0;
@@ -90,7 +90,7 @@
   margin-bottom: 6%;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   .chauffage .content .images div {
     width: 30%;
     margin: auto;

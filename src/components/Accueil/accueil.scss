@@ -34,13 +34,14 @@
     .text {
       background-color: rgba(255, 255, 255, 0.836);
       border-radius: 1vw;
-      padding: 1vw;
       text-align: center;
       //width: fit-content;
       margin: auto;
       margin-bottom: 5vw;
+      padding: 2.5vw;
       @media screen and (aspect-ratio > 1/1) {
         margin-bottom: 2vw;
+        padding: 1vw;
       }
       //margin-top: 10px;
       //margin-bottom: 10px;

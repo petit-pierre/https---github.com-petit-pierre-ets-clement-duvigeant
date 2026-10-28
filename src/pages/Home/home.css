@@ -17,6 +17,11 @@
   border-radius: 1vw;
   padding: 1vw;
 }
+@media screen and (aspect-ratio < 1/1) {
+  .home .text {
+    padding: 2.5vw;
+  }
+}
 .home .section {
   margin-top: 100px;
   margin-bottom: 100px;
