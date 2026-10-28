@@ -2,7 +2,7 @@ html {
   // --res: calc(0.01 * 10vmin)
 }
 * {
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   color: black;
   h1 {
     font-size: calc(20 * var(--res));
-    @media (max-width: 768px) {
+    @media screen and (aspect-ratio<1/1) {
       font-size: calc(40 * var(--res));
     }
   }
@@ -36,7 +36,15 @@ body {
     font-size: 1vw;
     font-weight: 500;
     //font-weight: bold;
-    @media (max-width: 768px) {
+    @media screen and (aspect-ratio<1/1) {
+      font-size: calc(24 * var(--res));
+    }
+  }
+  span {
+    font-size: 0.6vw;
+    font-weight: 500;
+    //font-weight: bold;
+    @media screen and (aspect-ratio<1/1) {
       font-size: calc(24 * var(--res));
     }
   }
@@ -48,11 +56,11 @@ body {
     /*@media (max-width: 768px) {
             font-size: calc(16 * var(--res));
         }*/
-    @media (max-width: 768px) {
+    @media screen and (aspect-ratio<1/1) {
       font-size: calc(24 * var(--res));
     }
   }
-  @media (min-width: 768px) {
+  @media screen and (aspect-ratio<1/1) {
     main {
       margin-bottom: -100px;
     }

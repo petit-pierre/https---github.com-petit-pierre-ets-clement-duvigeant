@@ -1,7 +1,3 @@
-* {
-  border: 1px solid red;
-}
-
 body {
   position: relative;
   margin: 0;
@@ -17,7 +13,7 @@ body {
 body h1 {
   font-size: calc(20 * var(--res));
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   body h1 {
     font-size: calc(40 * var(--res));
   }
@@ -32,8 +28,17 @@ body p {
   font-size: 1vw;
   font-weight: 500;
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   body p {
+    font-size: calc(24 * var(--res));
+  }
+}
+body span {
+  font-size: 0.6vw;
+  font-weight: 500;
+}
+@media screen and (aspect-ratio < 1/1) {
+  body span {
     font-size: calc(24 * var(--res));
   }
 }
@@ -45,12 +50,12 @@ body li {
           font-size: calc(16 * var(--res));
       }*/
 }
-@media (max-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   body li {
     font-size: calc(24 * var(--res));
   }
 }
-@media (min-width: 768px) {
+@media screen and (aspect-ratio < 1/1) {
   body main {
     margin-bottom: -100px;
   }

@@ -49,7 +49,7 @@ function Header() {
       evt.target.parentElement.parentElement.classList.add("active");
     } else {
       evt.target.parentElement.parentElement.parentElement.classList.add(
-        "active"
+        "active",
       );
     }
   }
@@ -85,11 +85,11 @@ function Header() {
             </Link>
           </div>
           <div className="name">
-              <h1>Clément Duvigeant – Plomberie, Chauffage et Climatisation</h1>
- <p>
-    Professionnel agréé dans la région de Castres, avec 15 années
-    d'expérience.
-  </p>
+            <h1>Clément Duvigeant – Plomberie, Chauffage et Climatisation</h1>
+            <p>
+              Professionnel agréé dans la région de Castres, avec 15 années
+              d'expérience.
+            </p>
             <p>Evaluation thermique avant travaux</p>
             <p>installations, entretiens et dépannages</p>
           </div>
@@ -116,14 +116,14 @@ function Header() {
                   src="https://l-araignee.net/ets-clement-duvigeant/assets/tel.png"
                   alt="logo"
                 ></img>
-                <p>07.81.11.54.30</p>
+                <span>07.81.11.54.30</span>
               </a>
               <a href="mailto:c-duvigeant@laposte.net" className="phone mail">
                 <img
                   src="https://l-araignee.net/ets-clement-duvigeant/assets/mail.png"
                   alt="logo"
                 ></img>
-                <p>c-duvigeant@laposte.net</p>
+                <span>c-duvigeant@laposte.net</span>
               </a>
             </div>
 
