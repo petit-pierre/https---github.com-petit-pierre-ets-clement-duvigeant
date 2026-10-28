@@ -6,20 +6,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 42lvh;
+  height: 50vw;
   margin-left: 2vw;
   margin-right: 2vw;
   padding-top: 2vw;
 }
 @media screen and (aspect-ratio > 1/1) {
   .sliderContainer {
-    height: 35vw;
+    height: 50vw;
     padding-top: 0;
-  }
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .sliderContainer {
-    height: 91lvh;
   }
 }
 .sliderContainer .carousel-item {
@@ -52,8 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1lvh;
-  margin-right: 1lvh;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 .sliderContainer .arrowAndCounter button {
   position: absolute;
@@ -66,12 +61,6 @@
 }
 .sliderContainer .arrowAndCounter button:hover {
   opacity: 1;
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .sliderContainer .arrowAndCounter button {
-    height: 100%;
-    width: 3vw;
-  }
 }
 .sliderContainer .arrowAndCounter button img {
   width: 50%;
@@ -130,11 +119,6 @@
     height: 2vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .sliderContainer .counter {
-    height: 5.2lvh;
-  }
-}
 .sliderContainer .cooldown {
   opacity: 0;
   cursor: default;
@@ -188,14 +172,6 @@
     margin: 0 1vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .sliderContainer .dot {
-    width: 2.6lvh;
-    height: 2.6lvh;
-    border-radius: 5.2lvh;
-    margin: 0 2.6lvh;
-  }
-}
 .sliderContainer .dotSelected {
   background-color: var(--primary-color);
   width: 3.9vw;
@@ -206,12 +182,6 @@
   .sliderContainer .dotSelected {
     width: 1.5vw;
     height: 1.5vw;
-  }
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .sliderContainer .dotSelected {
-    width: 3.9lvh;
-    height: 3.9lvh;
   }
 }
 .sliderContainer .inner {

@@ -2,7 +2,6 @@
   background-color: white;
   bottom: 0;
   width: 100%;
-  height: 160px;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -22,7 +21,7 @@
 }
 .footer .legal .cgvLink {
   /*color:#0000FF;
-  text-decoration: underline;*/
+        text-decoration: underline;*/
   cursor: pointer;
 }
 .footer p {

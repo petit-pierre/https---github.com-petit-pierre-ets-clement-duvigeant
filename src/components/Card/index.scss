@@ -46,8 +46,8 @@
   background-color: var(--bg-color);
   pointer-events: all;
   transition:
-  transform 0.2s ease-in-out,
-  color 0.3s ease-in-out;
+    transform 0.2s ease-in-out,
+    color 0.3s ease-in-out;
   &.approved {
     color: #1c7430;
   }
@@ -71,34 +71,44 @@
 
 .carousel-img {
   //width: 100%;
-  height: 31.2vw;
-  background-color: white;
+  // height: 31.2vw;
+  // background-color: white;
   object-fit: contain;
   // margin: auto;
   // height: 70%;
+  //max-width: 60%;
+  width: 60%;
 
   @media screen and (aspect-ratio > 1/1) {
-    height: 18vw;
-  }
-
-  @media screen and (aspect-ratio > 2.6/1) {
-    height: 31.2lvh;
+    width: 30%;
   }
 }
 
 .remove-button {
   position: absolute;
-  left: 55%;
-  bottom: -10%;
+  pointer-events: all;
+  top: 1vw;
+  right: 22%;
   z-index: 10;
-
+  transition: all 0.2s;
+  border: none;
+  padding: 2vw;
+  @media screen and (aspect-ratio > 1/1) {
+    right: 36%;
+    padding: 0.5vw;
+  }
+  border-radius: 0.5vw;
+  cursor: pointer;
   &:hover {
     background-color: darkred;
     color: white;
-    transition: all 0.2s;
   }
 }
 
 .photo-container {
-  pointer-events: all;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

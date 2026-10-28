@@ -3,25 +3,20 @@
   --primary-color: darkgreen;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 42lvh;
+  height: 50vw;
   margin-left: 2vw;
   margin-right: 2vw;
   padding-top: 2vw;
 }
 @media screen and (aspect-ratio > 1/1) {
   .photoSliderContainer {
+    overflow: hidden;
     height: 25vw;
     padding-top: 0;
-  }
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer {
-    height: 91lvh;
   }
 }
 .photoSliderContainer .carousel-item {
@@ -46,7 +41,10 @@
 }
 @media screen and (aspect-ratio > 1/1) {
   .photoSliderContainer .slMax {
-    width: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .photoSliderContainer .arrowAndCounter {
@@ -67,12 +65,6 @@
 }
 .photoSliderContainer .arrowAndCounter button:hover {
   opacity: 1;
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer .arrowAndCounter button {
-    height: 100%;
-    width: 3vw;
-  }
 }
 .photoSliderContainer .arrowAndCounter button img {
   width: 50%;
@@ -131,11 +123,6 @@
     height: 2vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer .counter {
-    height: 5.2lvh;
-  }
-}
 .photoSliderContainer .cooldown {
   opacity: 0;
   cursor: default;
@@ -189,14 +176,6 @@
     margin: 0 1vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer .dot {
-    width: 2.6lvh;
-    height: 2.6lvh;
-    border-radius: 5.2lvh;
-    margin: 0 2.6lvh;
-  }
-}
 .photoSliderContainer .dotSelected {
   background-color: var(--primary-color);
   width: 3.9vw;
@@ -209,24 +188,13 @@
     height: 1.5vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer .dotSelected {
-    width: 3.9lvh;
-    height: 3.9lvh;
-  }
-}
 .photoSliderContainer .inner {
   display: flex;
   flex-direction: row;
   width: 100%;
   overflow: hidden;
+  height: 100%;
   justify-content: center;
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .photoSliderContainer .inner {
-    margin: auto;
-    width: 90%;
-  }
 }
 .photoSliderContainer .buttonArrow {
   border: 0px;

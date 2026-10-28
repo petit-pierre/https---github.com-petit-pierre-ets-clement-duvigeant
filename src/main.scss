@@ -36,20 +36,27 @@ body {
       color: black;
     }
   }
-  p {
+  p,
+  button,
+  input {
     font-size: 1vw;
     font-weight: 500;
-    //font-weight: bold;
     @media screen and (aspect-ratio<1/1) {
       font-size: 2.5vw;
+    }
+  }
+  strong {
+    font-size: 1.2vw;
+    font-weight: bold;
+    @media screen and (aspect-ratio<1/1) {
+      font-size: 3vw;
     }
   }
   span {
     font-size: 0.6vw;
     font-weight: 500;
-    //font-weight: bold;
     @media screen and (aspect-ratio<1/1) {
-      font-size: calc(24 * var(--res));
+      font-size: 1.5vw;
     }
   }
   li {

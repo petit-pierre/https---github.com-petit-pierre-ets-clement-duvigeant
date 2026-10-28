@@ -69,34 +69,45 @@
 }
 
 .carousel-img {
-  height: 31.2vw;
-  background-color: white;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 60%;
 }
 @media screen and (aspect-ratio > 1/1) {
   .carousel-img {
-    height: 18vw;
-  }
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .carousel-img {
-    height: 31.2lvh;
+    width: 30%;
   }
 }
 
 .remove-button {
   position: absolute;
-  left: 55%;
-  bottom: -10%;
+  pointer-events: all;
+  top: 1vw;
+  right: 22%;
   z-index: 10;
+  transition: all 0.2s;
+  border: none;
+  padding: 2vw;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .remove-button {
+    right: 36%;
+    padding: 0.5vw;
+  }
+}
+.remove-button {
+  border-radius: 0.5vw;
+  cursor: pointer;
 }
 .remove-button:hover {
   background-color: darkred;
   color: white;
-  transition: all 0.2s;
 }
 
 .photo-container {
-  pointer-events: all;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
