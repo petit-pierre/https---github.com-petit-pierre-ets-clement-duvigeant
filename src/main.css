@@ -30,7 +30,7 @@ body p {
 }
 @media screen and (aspect-ratio < 1/1) {
   body p {
-    font-size: calc(24 * var(--res));
+    font-size: 2.5vw;
   }
 }
 body span {

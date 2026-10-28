@@ -9,7 +9,7 @@
 }
 @media screen and (aspect-ratio < 1/1) {
   .header {
-    height: 140px;
+    height: 20vw;
   }
 }
 @media screen and (aspect-ratio > 1/1) {
@@ -36,9 +36,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .header .top .contact .mail {
-    margin-top: 5px;
-  }
 }
 .header .top .logo {
   height: 4vw;
@@ -47,7 +44,8 @@
 }
 @media screen and (aspect-ratio < 1/1) {
   .header .top .logo {
-    width: 300%;
+    margin: 1vw;
+    height: 8vw;
   }
 }
 .header .top .logo a {
@@ -77,9 +75,16 @@
 .header .top .name p {
   margin: 0;
 }
+@media screen and (aspect-ratio < 1/1) {
+  .header .top .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
 .header .top .phone {
-  max-height: 70px;
-  margin-right: 10px;
+  max-height: 10vw;
+  margin: 0 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +100,9 @@
   -o-object-fit: cover;
      object-fit: cover;
   margin: auto;
+}
+.header .top .mail {
+  padding-top: 0.75vw;
 }
 .header .bottom {
   width: 100%;
@@ -120,7 +128,7 @@
 }
 @media screen and (aspect-ratio < 1/1) {
   .header .bottom nav .button {
-    width: calc(19% - 12px);
+    width: 24.375vw;
   }
 }
 .header .bottom nav .button {
@@ -172,7 +180,7 @@
 }
 @media screen and (aspect-ratio < 1/1) {
   .header .bottom nav .phone {
-    display: none;
+    display: none !important;
   }
 }
 .header .bottom nav .phone {
@@ -193,6 +201,6 @@
 }
 @media screen and (aspect-ratio > 1/1) {
   .headerField {
-    height: 80px;
+    height: 7vw;
   }
 }/*# sourceMappingURL=header.css.map */

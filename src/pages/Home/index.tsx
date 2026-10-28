@@ -4,12 +4,14 @@ import Chauffage from "../../components/Chauffage";
 import Vmc from "../../components/Vmc";
 import Eau from "../../components/Eau";
 import Cgv from "../../components/Cgv";
-//import { useContent } from "../../contexts/ContentContext";
+
 import "./home.css";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HomeSlider from "../../components/HomeSlider";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Home() {
   const [message, setMessage] = useState([]);
@@ -106,6 +108,7 @@ function Home() {
 
   return (
     <main>
+      <Header></Header>
       {/* messages */}
       {message && (
         <div className="info-message">
@@ -168,6 +171,7 @@ function Home() {
           <Cgv addMessage={addMessage}></Cgv>
         </div>
       </div>
+      <Footer></Footer>
     </main>
   );
 }

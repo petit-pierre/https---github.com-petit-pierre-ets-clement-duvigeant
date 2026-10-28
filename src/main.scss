@@ -15,6 +15,10 @@ body {
     -moz-osx-font-smoothing: grayscale;*/
   line-height: 1;
   background-image: url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
+  // background-image:
+  // linear-gradient(rgba(254, 254, 254, 0.5), rgba(255, 255, 255, 0.5)),
+  // /* Ajuste le 0.5 pour l'opacité (0 = transparent, 1 = opaque) */
+  // url("https://l-araignee.net/ets-clement-duvigeant/assets/background.webp");
   background-size: cover;
   background-attachment: fixed;
   color: black;
@@ -37,7 +41,7 @@ body {
     font-weight: 500;
     //font-weight: bold;
     @media screen and (aspect-ratio<1/1) {
-      font-size: calc(24 * var(--res));
+      font-size: 2.5vw;
     }
   }
   span {
