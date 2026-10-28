@@ -4,6 +4,7 @@ import { useContent } from "../../contexts/ContentContext";
 import active from "../../assets/review-active.svg";
 import inactive from "../../assets/review-inactive.svg";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Card({
   review = null,
@@ -11,6 +12,7 @@ export default function Card({
   addMessage,
   onReviewUpdated,
 }) {
+  const navigate = useNavigate();
   const isConnected = !!localStorage.getItem("token");
   const [isUpdating, setIsUpdating] = useState(false);
   const MAX_SNIPPET_LENGTH = 150;
@@ -36,7 +38,10 @@ export default function Card({
       await refreshContent();
       addMessage("Photo supprimé avec succes.");
     } catch (error) {
-      console.error(error);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     }
   };
   const updateReviewStatus = async (
@@ -65,7 +70,10 @@ export default function Card({
       await onReviewUpdated?.();
       return data;
     } catch (e) {
-      console.error("Erreur modification statut :", e);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     } finally {
       setIsUpdating(false);
     }

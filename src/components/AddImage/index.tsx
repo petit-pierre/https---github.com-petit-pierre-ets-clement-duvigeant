@@ -35,12 +35,15 @@ export default function AddImage({ location, addMessage }) {
         throw new Error(data.error || "Photo upload failed");
       }
 
-      console.log("Uploaded photo:", location);
+      // console.log("Uploaded photo:", location);
       await refreshContent();
       addMessage("Photo ajoutée avec succès.");
     } catch (error) {
       addMessage("Erreur lors de l'envoi de l'image.");
-      console.error(error);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     } finally {
       setUploading(false);
       e.target.value = "";

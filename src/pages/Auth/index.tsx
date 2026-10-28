@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import "./auth.css";
 
 export default function Auth() {
-  const [email, setEmail] = useState("admin@admin.fr");
+  const location = useLocation();
+
+  // Récupération sécurisée du message d'erreur (avec optional chaining ?. pour éviter les bugs si on arrive sur la page directement sans passer par la redirection)
+  const errorMessage = location.state?.errorMessage;
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
@@ -49,6 +53,11 @@ export default function Auth() {
   return (
     <div className="auth-container">
       <h1>Connexion</h1>
+      {errorMessage && (
+        <div className="alert-error">
+          Oups ! Une erreur est survenue, reconnectez-vous.
+        </div>
+      )}
       <form className="auth-form">
         <label htmlFor="email">Email:</label>
         <input

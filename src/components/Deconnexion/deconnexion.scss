@@ -1,10 +1,12 @@
 .disconnect-button {
-  min-width: 200px;
+  // min-width: 200px;
+  cursor: pointer;
   position: fixed;
   z-index: 10;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1vw;
+  right: 1vw;
   background-color: red;
+  border: none;
   padding: 1vw;
-  font-size: 2vw;
+  font-size: 1vw;
 }

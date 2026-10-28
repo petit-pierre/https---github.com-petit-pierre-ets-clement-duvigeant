@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import HomeSlider from "../../components/HomeSlider";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Deconnexion from "../../components/Deconnexion";
 
 function Home() {
   const [message, setMessage] = useState([]);
@@ -172,6 +173,7 @@ function Home() {
         </div>
       </div>
       <Footer></Footer>
+      <Deconnexion></Deconnexion>
     </main>
   );
 }
