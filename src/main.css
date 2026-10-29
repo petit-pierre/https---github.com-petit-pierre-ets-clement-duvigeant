@@ -20,6 +20,12 @@ body h1 {
 }
 body h2 {
   color: white;
+  font-size: 2vw;
+}
+@media screen and (aspect-ratio < 1/1) {
+  body h2 {
+    font-size: 5vw;
+  }
 }
 body #google-reviews h2 {
   color: black;

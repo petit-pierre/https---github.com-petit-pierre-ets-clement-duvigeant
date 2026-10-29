@@ -1,7 +1,7 @@
 .eau {
   width: 100%;
   .text {
-    width: calc(100% - 20px);
+    // width: calc(100% - 20px);
   }
   .logo {
     width: 80%;
@@ -38,6 +38,7 @@
     }
   }
   .images {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -47,67 +48,44 @@
             flex-direction: column;
         }*/
 
-    .img1 {
-      width: 30%;
-      height: 30vh;
-      border-radius: 10px;
-      overflow: hidden;
-      @media (max-width: 768px) {
-        height: 11vh;
-      }
-      img {
-        width: 100%;
-        transition: 4s;
-      }
-      img:hover {
-        margin-top: -2%;
-        margin-left: -2%;
-        width: 104%;
-        transition: 4s;
-      }
+    // .img1 {
+    //   width: 30%;
+    //   height: 30vh;
+    //   border-radius: 10px;
+    //   overflow: hidden;
+    //   @media screen and (aspect-ratio<1/1) {
+    //     height: 11vh;
+    //   }
+    //   img {
+    //     width: 100%;
+    //     transition: 4s;
+    //   }
+    //   img:hover {
+    //     margin-top: -2%;
+    //     margin-left: -2%;
+    //     width: 104%;
+    //     transition: 4s;
+    //   }
+    // }
+    height: 20vw;
+    @media screen and (aspect-ratio>1/1) {
+      height: 15vw;
     }
-    .img2 {
-      width: 30%;
-      height: 30vh;
-      border-radius: 10px;
+    .image-container {
+      width: 26vw;
+      height: 100%;
       overflow: hidden;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
       position: relative;
-      @media (max-width: 768px) {
-        height: 11vh;
-      }
-      img {
-        position: absolute;
-        width: 130%;
-        margin-left: -15%;
-        //transform-origin: bottom;
-        //margin-bottom: 0%;
-        bottom: -20px;
-        transition: 4s;
-      }
-      img:hover {
-        margin-top: -15%;
-        margin-left: -17%;
-        width: 134%;
-        transition: 4s;
-      }
-    }
-    .img3 {
-      width: 30%;
-      height: 30vh;
-      border-radius: 10px;
-      overflow: hidden;
-      @media (max-width: 768px) {
-        height: 11vh;
-      }
-      img {
-        width: 100%;
-        transition: 4s;
-      }
-      img:hover {
-        margin-top: -2%;
-        margin-left: -2%;
-        width: 104%;
-        transition: 4s;
+      // position: absolute;
+      object-fit: cover;
+      transition: 4s;
+      &:hover {
+        transform: perspective(500px) translateZ(40px);
       }
     }
   }
