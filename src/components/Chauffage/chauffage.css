@@ -63,7 +63,8 @@
   width: 100%;
 }
 .chauffage .content .text {
-  width: calc(100% - 20px);
+  width: 94%;
+  border: 1px solid white;
 }
 .chauffage .content .images {
   width: 29%;

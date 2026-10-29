@@ -1,6 +1,3 @@
-.climatisation * {
-  border: 1px solid red;
-}
 .climatisation {
   width: 100%;
   padding-bottom: 50px;
@@ -21,6 +18,21 @@
 @media screen and (aspect-ratio < 1/1) {
   .climatisation .contentDesktop .column {
     width: 49%;
+  }
+  .climatisation .contentDesktop .column > :nth-child(1) .editor {
+    flex-wrap: wrap;
+  }
+  .climatisation .contentDesktop .column > :nth-child(2) .text, .climatisation .contentDesktop .column > :nth-child(2).text {
+    width: 193%;
+  }
+  .climatisation .contentDesktop .column > :nth-child(2) .editor {
+    width: 204%;
+  }
+  .climatisation .contentDesktop .column > :nth-child(2).text {
+    margin-top: 24vw;
+  }
+  .climatisation .contentDesktop .column > :nth-child(2).text-editor .text {
+    margin-top: 0;
   }
 }
 @media screen and (aspect-ratio > 1/1) {
@@ -51,7 +63,6 @@
   }
 }
 .climatisation .contentDesktop .photoClim {
-  max-height: 43vw;
   overflow: hidden;
 }
 .climatisation .contentDesktop .photoClim img {
@@ -128,6 +139,11 @@
 }
 .climatisation .contentDesktop .logoMax {
   display: flex;
+}
+@media screen and (aspect-ratio < 1/1) {
+  .climatisation .contentDesktop .logoMax {
+    width: 95vw;
+  }
 }
 .climatisation .contentDesktop .mobile {
   display: flex;

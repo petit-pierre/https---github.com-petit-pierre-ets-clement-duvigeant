@@ -1,8 +1,9 @@
 .climatisation {
   * {
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   width: 100%;
+
   //overflow: hidden;
   padding-bottom: 50px;
   .contentDesktop {
@@ -17,6 +18,35 @@
       //height: fit-content;
       @media screen and (aspect-ratio<1/1) {
         width: 49%;
+        > :nth-child(1) {
+          .editor {
+            flex-wrap: wrap;
+          }
+        }
+        > :nth-child(2) {
+          .text,
+          &.text {
+            width: 193%;
+          }
+          .editor {
+            width: 204%;
+          }
+          &.text {
+            margin-top: 24vw;
+          }
+          &.text-editor {
+            .text {
+              margin-top: 0;
+            }
+          }
+        }
+        // .text,
+        // .text-editor {
+        //   & > :nth-child(2) {
+        //     width: 193%;
+        //     border: 1px solid white;
+        //   }
+        // }
       }
       .text {
         //width: 100%;
@@ -49,7 +79,7 @@
       @media screen and (aspect-ratio<1/1) {
         max-height: 70vw;
       }
-      max-height: 43vw;
+      // max-height: 43vw;
       overflow: hidden;
       img {
         width: 100%;
@@ -121,6 +151,9 @@
     }
     .logoMax {
       display: flex;
+      @media screen and (aspect-ratio<1/1) {
+        width: 95vw;
+      }
     }
     .mobile {
       display: flex;
