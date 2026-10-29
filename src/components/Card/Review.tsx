@@ -150,7 +150,11 @@ export default function Card({
     return (
       <div className="review-card">
         <p>{review.user_name}</p>
-        <img src={review.user_thumbnail} alt="user profile picture" />
+        <img
+          src={review.user_thumbnail}
+          alt="user profile picture"
+          referrerPolicy="no-referrer"
+        />
         <p>{review.date}</p>
         <p>
           {truncate(review.snippet, MAX_SNIPPET_LENGTH)}

@@ -134,9 +134,7 @@ function Home() {
           <div className="section">
             <Chauffage addMessage={addMessage}></Chauffage>
           </div>
-          <div className="test">
-            <HomeSlider />
-          </div>
+
           <div className="ancre">
             <span id="climatisation" className="id"></span>
             <span className="observer climatisation" ref={climatisation}></span>
@@ -162,6 +160,9 @@ function Home() {
           </div>
           <div className="section">
             <Vmc addMessage={addMessage}></Vmc>
+          </div>
+          <div className="test">
+            <HomeSlider />
           </div>
         </div>
 

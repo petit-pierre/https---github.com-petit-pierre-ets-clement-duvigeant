@@ -1,5 +1,5 @@
 .header {
-  z-index: 2;
+  z-index: 10;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid black;

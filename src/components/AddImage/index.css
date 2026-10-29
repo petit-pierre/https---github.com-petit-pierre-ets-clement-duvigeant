@@ -1,5 +1,12 @@
 .add-photo-form {
-  margin: 0 auto 5vw auto;
+  margin: 0 auto 10vw auto;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .add-photo-form {
+    margin: 0 auto 5vw auto;
+  }
+}
+.add-photo-form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,7 +22,7 @@
 }
 @media screen and (aspect-ratio > 1/1) {
   .add-photo-form {
-    margin: 0 auto 2vw auto;
+    margin: 0 auto 4vw auto;
   }
 }
 .add-photo-form #file-upload {
