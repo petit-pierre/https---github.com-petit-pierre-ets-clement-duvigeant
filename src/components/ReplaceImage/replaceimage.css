@@ -19,6 +19,12 @@
   font-size: 1.5vw;
   transition: 0.2s;
 }
+@media screen and (aspect-ratio < 1/1) {
+  .replace-menu .replace-button {
+    font-size: 5vw;
+    padding: 2vw;
+  }
+}
 .replace-menu .replace-button:hover {
   background: #f2f2f2;
 }
@@ -46,8 +52,10 @@
   display: block;
   position: absolute;
   top: 50%;
-  right: 50%;
+  left: 50%;
   z-index: 10;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
 }
 .menu-hover-top-right {
   display: block;

@@ -1,6 +1,21 @@
 .text-editor {
+  .editor {
+    // display: inline;
+    @media screen and (aspect-ratio<1/1) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5vw;
+    }
+  }
   button {
     padding: 0.5vw 1vw;
     margin: 0.5vw 0.5vw 0.5vw 0;
+    // width: inherit;
+    @media screen and (aspect-ratio<1/1) {
+      width: 100%;
+      padding: 2vw;
+      margin: 0.5vw 0;
+    }
   }
 }

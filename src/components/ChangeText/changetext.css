@@ -1,4 +1,19 @@
+@media screen and (aspect-ratio < 1/1) {
+  .text-editor .editor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5vw;
+  }
+}
 .text-editor button {
   padding: 0.5vw 1vw;
   margin: 0.5vw 0.5vw 0.5vw 0;
+}
+@media screen and (aspect-ratio < 1/1) {
+  .text-editor button {
+    width: 100%;
+    padding: 2vw;
+    margin: 0.5vw 0;
+  }
 }/*# sourceMappingURL=changetext.css.map */

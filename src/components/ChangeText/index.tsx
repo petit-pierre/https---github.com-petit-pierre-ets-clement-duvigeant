@@ -68,7 +68,7 @@ export default function ChangeText({
 
   return (
     <form onSubmit={submitContent} className="text-editor">
-      <div>
+      <div className="editor">
         <button
           type="button"
           onClick={() => editor.chain().focus().toggleBold().run()}

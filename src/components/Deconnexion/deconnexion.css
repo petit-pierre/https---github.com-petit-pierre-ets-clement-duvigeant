@@ -6,6 +6,12 @@
   right: 1vw;
   background-color: red;
   border: none;
-  padding: 1vw;
-  font-size: 1vw;
+  padding: 2vw;
+  font-size: 4vw;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .disconnect-button {
+    padding: 1vw;
+    font-size: 1vw;
+  }
 }/*# sourceMappingURL=deconnexion.css.map */
