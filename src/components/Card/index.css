@@ -1,45 +1,93 @@
+@charset "UTF-8";
 .review-card {
   --bg-color: white;
   --dark-color: black;
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Hérite de la couleur du texte parent (évite le bleu par défaut) */
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(40, 68, 193, 0.1);
+  box-shadow: 1vw 2vw 4vw rgba(6, 6, 6, 0.545);
   transition: transform 0.2s ease-in-out;
-  width: 80%;
+  width: 55%;
   overflow: hidden;
   position: relative;
   height: 72.8vw;
   background-color: var(--bg-color);
   pointer-events: all;
+  margin: 0.8%;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+.review-card .avatar {
+  width: 30%;
+}
+.review-card .review-star-icon {
+  width: 15%;
+}
+.review-card .review-stars {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (aspect-ratio > 1/1) {
   .review-card {
-    width: 18%;
+    width: 22%;
     height: 28vw;
     margin: 0.8%;
     padding-left: 1vw;
     padding-right: 1vw;
   }
 }
-@media screen and (aspect-ratio > 2.6/1) {
-  .review-card {
-    height: 72.8lvh;
-  }
-}
 
 .review-card-admin {
   --bg-color: white;
   --dark-color: black;
+}
+.review-card-admin .avatar {
+  width: 30%;
+}
+.review-card-admin .review-star-icon {
+  width: 12%;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .review-card-admin .review-star-icon {
+    width: 15%;
+  }
+}
+.review-card-admin .review-stars {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.review-card-admin a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Hérite de la couleur du texte parent (évite le bleu par défaut) */
+  cursor: pointer;
+}
+.review-card-admin {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(40, 68, 193, 0.1);
-  width: 60%;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  box-shadow: 1vw 2vw 4vw rgba(6, 6, 6, 0.545);
+  width: 55%;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .review-card-admin {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+.review-card-admin {
   overflow: hidden;
   position: relative;
   height: 72.8vw;
@@ -53,18 +101,32 @@
 .review-card-admin.rejected {
   color: #c52a37;
 }
+.review-card-admin button {
+  display: inline;
+  position: absolute;
+  bottom: 1vw;
+  width: 23%;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .review-card-admin button {
+    width: 25%;
+  }
+}
+.review-card-admin button.secondOne {
+  left: 30%;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .review-card-admin button.secondOne {
+    left: 35%;
+  }
+}
 @media screen and (aspect-ratio > 1/1) {
   .review-card-admin {
-    width: 18%;
+    width: 22%;
     height: 28vw;
     margin: 0.8%;
     padding-left: 1vw;
     padding-right: 1vw;
-  }
-}
-@media screen and (aspect-ratio > 2.6/1) {
-  .review-card-admin {
-    height: 100lvh;
   }
 }
 

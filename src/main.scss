@@ -6,6 +6,10 @@ html {
 }
 
 body {
+  main {
+    width: 100vw;
+    overflow: hidden;
+  }
   //width: 100%;
   //overflow: hidden;
   position: relative;

@@ -1,45 +1,86 @@
 .review-card {
   --bg-color: white;
   --dark-color: black;
-
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Hérite de la couleur du texte parent (évite le bleu par défaut) */
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(40, 68, 193, 0.1);
+  box-shadow: 1vw 2vw 4vw rgba(6, 6, 6, 0.545);
   transition: transform 0.2s ease-in-out;
-  width: 80%;
+  width: 55%;
   overflow: hidden;
   position: relative;
   height: 72.8vw;
   background-color: var(--bg-color);
   pointer-events: all;
+  margin: 0.8%;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  .avatar {
+    width: 30%;
+  }
+  .review-star-icon {
+    width: 15%;
+  }
+  .review-stars {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    //width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+  }
 
   @media screen and (aspect-ratio > 1/1) {
-    width: 18%;
+    width: 22%;
     height: 28vw;
     margin: 0.8%;
     padding-left: 1vw;
     padding-right: 1vw;
     // margin-top: 5vw;
   }
-  @media screen and (aspect-ratio > 2.6/1) {
-    height: 72.8lvh;
-  }
 }
 
 .review-card-admin {
   --bg-color: white;
   --dark-color: black;
-
+  .avatar {
+    width: 30%;
+  }
+  .review-star-icon {
+    width: 12%;
+    @media screen and (aspect-ratio > 1/1) {
+      width: 15%;
+    }
+  }
+  .review-stars {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    //width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+  }
+  a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Hérite de la couleur du texte parent (évite le bleu par défaut) */
+    cursor: pointer;
+  }
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(40, 68, 193, 0.1);
-  width: 60%;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  box-shadow: 1vw 2vw 4vw rgba(6, 6, 6, 0.545);
+  width: 55%;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  @media screen and (aspect-ratio > 1/1) {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
   overflow: hidden;
   position: relative;
   height: 72.8vw;
@@ -55,17 +96,29 @@
   &.rejected {
     color: #c52a37;
   }
+  button {
+    display: inline;
+    position: absolute;
+    bottom: 1vw;
+    width: 23%;
+    @media screen and (aspect-ratio > 1/1) {
+      width: 25%;
+    }
+    &.secondOne {
+      left: 30%;
+      @media screen and (aspect-ratio > 1/1) {
+        left: 35%;
+      }
+    }
+  }
 
   @media screen and (aspect-ratio > 1/1) {
-    width: 18%;
+    width: 22%;
     height: 28vw;
     margin: 0.8%;
     padding-left: 1vw;
     padding-right: 1vw;
     // margin-top: 5vw;
-  }
-  @media screen and (aspect-ratio > 2.6/1) {
-    height: 100lvh;
   }
 }
 

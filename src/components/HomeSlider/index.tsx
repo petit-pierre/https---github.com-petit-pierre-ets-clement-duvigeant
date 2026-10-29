@@ -17,7 +17,7 @@ export default function HomeSlider() {
 
   const get_review = async () => {
     console.log("isConnected :", isConnected);
-     if (isConnected) {
+    if (isConnected) {
       try {
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}/reviews/`,
@@ -31,10 +31,10 @@ export default function HomeSlider() {
         const data = await response.json();
         if (!response.ok) {
           throw new Error(data.error || "Echec de récupération des avis");
-        }        
-        return data;        
-      } catch (e) { 
-        console.error("Erreur récupération des avis admin :", e);        
+        }
+        return data;
+      } catch (e) {
+        console.error("Erreur récupération des avis admin :", e);
         return [];
       }
     }
@@ -49,26 +49,25 @@ export default function HomeSlider() {
       if (!response.ok) {
         throw new Error(data.error || "Echec de récupération des avis");
       }
-      return data;      
-    } catch (e) {       
+      return data;
+    } catch (e) {
       console.error("Erreur récupération avis :", e);
-      return [];     
+      return [];
     }
   };
   const refreshReviews = async () => {
     const data = await get_review();
     setReviews(data);
   };
-  
+
   useEffect(() => {
-  get_review().then((data) => {
-    console.log("Avis récupérés :", data);
-    setReviews(data);
-  });
-}, []);
+    get_review().then((data) => {
+      console.log("Avis récupérés :", data);
+      setReviews(data);
+    });
+  }, []);
 
   const sortedSlider = useMemo(() => {
-    
     if (!reviews || reviews.length === 0) return [];
     let listClone = structuredClone(reviews);
     if (listClone.length === 2) {
@@ -166,65 +165,66 @@ export default function HomeSlider() {
   const activeDotIndex = isOriginallyTwoItems ? selected % 2 : selected;
 
   return (
-    <div
-      className="sliderField sliderContainer"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      <h2>Avis</h2>
-      <div className="inner">
-        {sortedSlider.map((item) => {
-          const { className, style } = getSlideProps(item.sliderIndex);
-          return (
-            <div key={item.sliderIndex} className={className} style={style}>
-              <Card review={item} onReviewUpdated={refreshReviews} />
-            </div>
-          );
-        })}
-      </div>
-
-      {length > 1 && (
-        <div className="arrowAndCounter">
-          <button
-            type="button"
-            tabIndex={0}
-            className={`buttonArrow arrowLeft ${cooldown ? "cooldown" : ""}`}
-            onClick={previousPicture}
-            aria-label="Diapositive précédente"
-          >
-            <img
-              className="leftArrow"
-              src={arrowLeft}
-              alt="flèche vers la gauche"
-            />
-          </button>
-
-          <button
-            type="button"
-            tabIndex={0}
-            className={`buttonArrow arrowRight ${cooldown ? "cooldown" : ""}`}
-            onClick={nextPicture}
-            aria-label="Diapositive suivante"
-          >
-            <img
-              className="rightArrow"
-              src={arrowRight}
-              alt="flèche vers la droite"
-            />
-          </button>
-
-          <div className="counter">
-            {Array.from({ length: dotCount }).map((_, dotIndex) => (
-              <div
-                key={dotIndex}
-                className={`dot d${dotIndex} ${
-                  dotIndex === activeDotIndex ? "dotSelected" : ""
-                }`}
-              />
-            ))}
-          </div>
+    sortedSlider.length > 0 && (
+      <div
+        className="sliderField sliderContainer"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="inner">
+          {sortedSlider.map((item) => {
+            const { className, style } = getSlideProps(item.sliderIndex);
+            return (
+              <div key={item.sliderIndex} className={className} style={style}>
+                <Card review={item} onReviewUpdated={refreshReviews} />
+              </div>
+            );
+          })}
         </div>
-      )}
-    </div>
+
+        {length > 1 && (
+          <div className="arrowAndCounter">
+            <button
+              type="button"
+              tabIndex={0}
+              className={`buttonArrow arrowLeft ${cooldown ? "cooldown" : ""}`}
+              onClick={previousPicture}
+              aria-label="Diapositive précédente"
+            >
+              <img
+                className="leftArrow"
+                src={arrowLeft}
+                alt="flèche vers la gauche"
+              />
+            </button>
+
+            <button
+              type="button"
+              tabIndex={0}
+              className={`buttonArrow arrowRight ${cooldown ? "cooldown" : ""}`}
+              onClick={nextPicture}
+              aria-label="Diapositive suivante"
+            >
+              <img
+                className="rightArrow"
+                src={arrowRight}
+                alt="flèche vers la droite"
+              />
+            </button>
+
+            <div className="counter">
+              {Array.from({ length: dotCount }).map((_, dotIndex) => (
+                <div
+                  key={dotIndex}
+                  className={`dot d${dotIndex} ${
+                    dotIndex === activeDotIndex ? "dotSelected" : ""
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    )
   );
 }

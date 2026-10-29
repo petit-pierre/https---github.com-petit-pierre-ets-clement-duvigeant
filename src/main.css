@@ -1,3 +1,7 @@
+body main {
+  width: 100vw;
+  overflow: hidden;
+}
 body {
   position: relative;
   margin: 0;

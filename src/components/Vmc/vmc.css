@@ -14,7 +14,6 @@
   flex-direction: column;
 }
 .vmc .content .left .text {
-  width: calc(100% - 20px);
   margin: 0;
 }
 .vmc .content .left .logo {
@@ -56,10 +55,7 @@
   transition: 5s;
 }
 .vmc .content .image .img:hover {
-  width: 104%;
-  margin-left: -2%;
-  margin-top: -2%;
-  transition: 5s;
+  transform: perspective(500px) translateZ(40px);
 }
 .vmc .content .image .logoVentilationLink {
   width: 100%;

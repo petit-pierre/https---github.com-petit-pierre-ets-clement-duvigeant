@@ -15,7 +15,7 @@ export default function Card({
   const navigate = useNavigate();
   const isConnected = !!localStorage.getItem("token");
   const [isUpdating, setIsUpdating] = useState(false);
-  const MAX_SNIPPET_LENGTH = 150;
+  const MAX_SNIPPET_LENGTH = 250;
   const { refreshContent } = useContent();
 
   const removeImage = async (id) => {
@@ -104,15 +104,17 @@ export default function Card({
   if (review && isConnected) {
     return (
       <div className={`review-card-admin ${review.status}`}>
-        <p>{review.user_name}</p>
-        <img
-          src={review.user_thumbnail}
-          referrerPolicy="no-referrer"
-          alt="user profile picture"
-          height="40"
-          width="40"
-        />
-        <p>{review.date}</p>
+        <a href={review.link}>
+          <p>{review.user_name}</p>
+          <img
+            src={review.user_thumbnail}
+            referrerPolicy="no-referrer"
+            alt="user profile picture"
+            height="40"
+            width="40"
+          />
+          <p>{review.date}</p>
+        </a>
         <p>
           {truncate(review.snippet, MAX_SNIPPET_LENGTH)}
           {review.snippet.length > MAX_SNIPPET_LENGTH && (
@@ -140,6 +142,7 @@ export default function Card({
         <button
           disabled={isUpdating}
           onClick={() => updateReviewStatus(review.id, "rejected")}
+          className="secondOne"
         >
           {isUpdating ? "Modification..." : "Refuser"}
         </button>
@@ -148,12 +151,13 @@ export default function Card({
   }
   if (review) {
     return (
-      <div className="review-card">
+      <a href={review.link} className="review-card">
         <p>{review.user_name}</p>
         <img
           src={review.user_thumbnail}
           alt="user profile picture"
           referrerPolicy="no-referrer"
+          className="avatar"
         />
         <p>{review.date}</p>
         <p>
@@ -173,8 +177,7 @@ export default function Card({
         >
           {renderStars(review.rating)}
         </div>
-        <p>{review.user_link}</p>
-      </div>
+      </a>
     );
   }
   if (photo) {
