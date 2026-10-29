@@ -110,8 +110,7 @@ export default function Card({
             src={review.user_thumbnail}
             referrerPolicy="no-referrer"
             alt="user profile picture"
-            height="40"
-            width="40"
+            className="avatar"
           />
           <p>{review.date}</p>
         </a>
