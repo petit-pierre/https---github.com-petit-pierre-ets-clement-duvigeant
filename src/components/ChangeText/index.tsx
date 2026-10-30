@@ -3,6 +3,7 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useState, useEffect } from "react";
 import "./changetext.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ChangeText({
   addMessage,
@@ -11,7 +12,7 @@ export default function ChangeText({
   id = null,
 }) {
   const [content, setContent] = useState("");
-
+  const navigate = useNavigate;
   const editor = useEditor({
     extensions: [StarterKit],
     content: placeholder,
@@ -58,7 +59,10 @@ export default function ChangeText({
 
       //console.log(data);
     } catch (error) {
-      console.error(error);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     }
   };
 

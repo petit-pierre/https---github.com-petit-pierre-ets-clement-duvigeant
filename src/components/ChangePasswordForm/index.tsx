@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./changepass.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ChangePasswordForm() {
-  const [email, setEmail] = useState("admin@admin.fr");
+  const navigate = useNavigate;
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [new_password, setNewPassword] = useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
+  const [succes, setSucces] = useState(false);
 
   const handle_change = async (e) => {
     e.preventDefault();
@@ -34,19 +37,27 @@ export default function ChangePasswordForm() {
         throw new Error(data.error || "Login failed");
       }
 
-      console.log("Changed password:", data);
+      setSucces(true);
     } catch (error) {
-      console.error(error);
+      localStorage.removeItem("token");
+      navigate("/login", {
+        state: { errorMessage: error.message },
+      });
     }
   };
 
-  return (
+  return succes ? (
+    <div className="change-pass-container">
+      <p> Mot de passe modifié avec succés</p>
+      <a href="./">Retour au site</a>
+    </div>
+  ) : (
     <div className="change-pass-container">
       <h1>Changer le mot de passe</h1>
       <form className="change-pass-form">
         <label htmlFor="email">Email:</label>
         <input
-          type="email"
+          type="text"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -81,6 +92,7 @@ export default function ChangePasswordForm() {
           onClick={handle_change}
         ></input>
       </form>
+      <a href="./">Retour au site</a>
     </div>
   );
 }

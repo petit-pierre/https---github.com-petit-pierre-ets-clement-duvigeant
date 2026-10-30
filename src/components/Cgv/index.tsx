@@ -52,7 +52,6 @@ function Cgv({ addMessage }) {
           <br></br>
           <strong>Hébergement</strong>
           <a href="https://www.hostpapa.fr/">
-            {" "}
             <p>HostPapa</p>
           </a>
           <a href="mailto:ventes@hostpapasupport.com">

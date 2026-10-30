@@ -3,27 +3,49 @@
   bottom: 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: left;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .footer {
+    flex-direction: row;
+  }
 }
 .footer .map {
   border-radius: 10px;
-  width: 30%;
+  width: 99vw;
   height: 150px;
+}
+@media screen and (aspect-ratio > 1/1) {
+  .footer .map {
+    width: 30%;
+  }
+}
+.footer .map {
   border: none;
-  margin: 5px;
+  margin: 0.5vw;
 }
 .footer .adresse {
-  margin: 5px;
+  margin: 0.5vw;
+}
+@media screen and (aspect-ratio < 1/1) {
+  .footer .adresse {
+    width: 49vw;
+  }
 }
 .footer .legal {
-  margin: 5px;
+  margin: 0.5vw;
+}
+@media screen and (aspect-ratio < 1/1) {
+  .footer .legal {
+    width: 49vw;
+  }
 }
 .footer .legal .cgvLink {
   /*color:#0000FF;
         text-decoration: underline;*/
+  color: #0066cc; /* Couleur classique d'un lien (ou 'inherit' pour la couleur du texte environnant) */
+  text-decoration: underline;
   cursor: pointer;
-}
-.footer p {
-  font-size: calc(20 * var(--res));
 }/*# sourceMappingURL=footer.css.map */

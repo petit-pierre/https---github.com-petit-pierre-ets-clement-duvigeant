@@ -9,6 +9,7 @@ export default function Auth() {
   const errorMessage = location.state?.errorMessage;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorDisplay, setErrorDisplay] = useState();
 
   const navigate = useNavigate();
 
@@ -46,7 +47,7 @@ export default function Auth() {
       refresh_reviews();
       navigate("/");
     } catch (error) {
-      console.error(error);
+      setErrorDisplay(error.message);
     }
   };
 
@@ -88,6 +89,8 @@ export default function Auth() {
           onClick={handle_login}
         ></input>
       </form>
+      <a href="./">Retour au site</a>
+      {errorDisplay && <p>{errorDisplay} </p>}
     </div>
   );
 }

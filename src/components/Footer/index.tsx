@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import "./footer.css";
 
 function Footer() {
@@ -10,6 +9,10 @@ function Footer() {
       document.querySelector(".content").classList.add("hidden");
       document.querySelector(".accueilContent").classList.add("hidden");
       document.querySelector(".cgv").classList.remove("hidden");
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     } else {
       document.querySelector(".cgv").classList.add("hidden");
       document.querySelector(".content").classList.remove("hidden");
