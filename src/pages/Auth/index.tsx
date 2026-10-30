@@ -46,7 +46,7 @@ export default function Auth() {
       localStorage.setItem("token", data.token);
       refresh_reviews();
       navigate("/");
-    } catch (error) {
+    } catch (error: any) {
       setErrorDisplay(error.message);
     }
   };

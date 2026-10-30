@@ -3,7 +3,7 @@ import "./changepass.css";
 import { useNavigate } from "react-router-dom";
 
 export default function ChangePasswordForm() {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [new_password, setNewPassword] = useState("");
@@ -12,7 +12,6 @@ export default function ChangePasswordForm() {
 
   const handle_change = async (e) => {
     e.preventDefault();
-
     const formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
@@ -38,7 +37,7 @@ export default function ChangePasswordForm() {
       }
 
       setSucces(true);
-    } catch (error) {
+    } catch (error: any) {
       localStorage.removeItem("token");
       navigate("/login", {
         state: { errorMessage: error.message },
@@ -60,7 +59,7 @@ export default function ChangePasswordForm() {
           type="text"
           name="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e: any) => setEmail(e.target.value)}
         />
         <label htmlFor="password">Mot de passe:</label>
         <input

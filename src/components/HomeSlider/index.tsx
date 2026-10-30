@@ -3,7 +3,7 @@ import arrowLeft from "./arrow_left.png";
 import arrowRight from "./arrow_right.png";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Card from "../Card/Review";
+import Card from "../Card/Review.tsx";
 
 export default function HomeSlider() {
   //const { list, loading } = useEffect((state) => state.spotlight);
@@ -12,11 +12,10 @@ export default function HomeSlider() {
   const [selected, setSelected] = useState(0);
   const [cooldown, setCooldown] = useState(false);
   const touchStartX = useRef(0);
-  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviews, setReviews] = useState([]);
   const isConnected = !!localStorage.getItem("token");
 
   const get_review = async () => {
-    console.log("isConnected :", isConnected);
     if (isConnected) {
       try {
         const response = await fetch(
@@ -33,8 +32,8 @@ export default function HomeSlider() {
           throw new Error(data.error || "Echec de récupération des avis");
         }
         return data;
-      } catch (e) {
-        console.error("Erreur récupération des avis admin :", e);
+      } catch (e: any) {
+        // console.error("Erreur récupération des avis admin :", e);
         return [];
       }
     }
@@ -50,8 +49,8 @@ export default function HomeSlider() {
         throw new Error(data.error || "Echec de récupération des avis");
       }
       return data;
-    } catch (e) {
-      console.error("Erreur récupération avis :", e);
+    } catch (e: any) {
+      // console.error("Erreur récupération avis :", e);
       return [];
     }
   };
@@ -62,7 +61,6 @@ export default function HomeSlider() {
 
   useEffect(() => {
     get_review().then((data) => {
-      console.log("Avis récupérés :", data);
       setReviews(data);
     });
   }, []);
@@ -176,7 +174,11 @@ export default function HomeSlider() {
             const { className, style } = getSlideProps(item.sliderIndex);
             return (
               <div key={item.sliderIndex} className={className} style={style}>
-                <Card review={item} onReviewUpdated={refreshReviews} />
+                <Card
+                  review={item}
+                  addMessage={null}
+                  onReviewUpdated={refreshReviews}
+                />
               </div>
             );
           })}

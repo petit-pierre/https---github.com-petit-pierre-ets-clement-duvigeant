@@ -40,7 +40,7 @@ export default function ReplaceImage({ id, addMessage, menuStyle = "" }) {
       //console.log("Replaced photo:", id);
       await refreshContent();
       addMessage("Photo remplacée avec succes.");
-    } catch (error) {
+    } catch (error: any) {
       addMessage("Mise a jour de la photo a échoué.");
       localStorage.removeItem("token");
       navigate("/login", {

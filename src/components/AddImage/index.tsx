@@ -40,7 +40,7 @@ export default function AddImage({ location, addMessage }) {
       // console.log("Uploaded photo:", location);
       await refreshContent();
       addMessage("Photo ajoutée avec succès.");
-    } catch (error) {
+    } catch (error: any) {
       addMessage("Erreur lors de l'envoi de l'image.");
       localStorage.removeItem("token");
       navigate("/login", {

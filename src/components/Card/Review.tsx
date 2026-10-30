@@ -37,7 +37,7 @@ export default function Card({
 
       await refreshContent();
       addMessage("Photo supprimé avec succes.");
-    } catch (error) {
+    } catch (error: any) {
       localStorage.removeItem("token");
       navigate("/login", {
         state: { errorMessage: error.message },
@@ -69,10 +69,10 @@ export default function Card({
       }
       await onReviewUpdated?.();
       return data;
-    } catch (e) {
+    } catch (e: any) {
       localStorage.removeItem("token");
       navigate("/login", {
-        state: { errorMessage: error.message },
+        state: { errorMessage: e.message },
       });
     } finally {
       setIsUpdating(false);

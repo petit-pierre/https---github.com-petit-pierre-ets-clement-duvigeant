@@ -12,7 +12,7 @@ export default function ChangeText({
   id = null,
 }) {
   const [content, setContent] = useState("");
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const editor = useEditor({
     extensions: [StarterKit],
     content: placeholder,
@@ -58,7 +58,7 @@ export default function ChangeText({
       addMessage("Contenu sauvegardé avec succes!");
 
       //console.log(data);
-    } catch (error) {
+    } catch (error: any) {
       localStorage.removeItem("token");
       navigate("/login", {
         state: { errorMessage: error.message },

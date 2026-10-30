@@ -1,12 +1,11 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
-
+export default defineConfig(() => {
   return {
     plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
+    base: "/ets-clement-duvigeant",
     server: {
       proxy: {
         "/backend": {

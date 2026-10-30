@@ -5,7 +5,7 @@ import ChangePass from "./pages/ChangePassword/index.tsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ets-clement-duvigeant">
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/login"} element={<Auth />} />

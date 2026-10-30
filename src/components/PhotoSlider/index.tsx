@@ -129,7 +129,12 @@ export default function PhotoSlider({ sliders, addMessage }) {
             const { className, style } = getSlideProps(item.sliderIndex);
             return (
               <div key={item.id} className={className} style={style}>
-                <Card photo={item} addMessage={addMessage} review={null} />
+                <Card
+                  photo={item}
+                  addMessage={addMessage}
+                  review={null}
+                  onReviewUpdated={() => {}}
+                />
               </div>
             );
           })}
