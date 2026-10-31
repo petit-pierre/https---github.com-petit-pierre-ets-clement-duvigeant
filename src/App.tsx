@@ -10,6 +10,7 @@ function App() {
         <Route path={"/"} element={<Home />} />
         <Route path={"/login"} element={<Auth />} />
         <Route path={"/change_password"} element={<ChangePass />} />
+        <Route path={"/*"} element={<Home />} />
       </Routes>
     </Router>
   );

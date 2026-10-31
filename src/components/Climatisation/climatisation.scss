@@ -94,19 +94,21 @@
     }
     .logoVentilationLink {
       margin: auto;
-      display: block;
-      margin-top: 2%;
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+
       width: 40%;
       height: 8vw;
-      margin-bottom: 6%;
+      // margin-bottom: 6%;
     }
     .socotec {
       margin: auto;
       display: block;
-      margin-top: 2%;
+      // margin-top: 2%;
       width: 40%;
       //height: 8vw;
-      margin-bottom: 6%;
+      // margin-bottom: 6%;
       filter: drop-shadow(0px 8px 4px #00000079);
       transition: 0.5s;
     }
@@ -117,13 +119,13 @@
     }
     .logoVentilation {
       margin: auto;
-      margin-top: -20%;
+      // margin-top: -20%;
       display: block;
       //margin-top: 2%;
       width: 100%;
       filter: drop-shadow(0px 8px 4px #00000079);
       transition: 0.5s;
-      border-radius: 11px;
+      // border-radius: 11px;
     }
     .logoVentilation:hover {
       filter: drop-shadow(0px 0px 0px #00000042);
@@ -151,6 +153,14 @@
     }
     .logoMax {
       display: flex;
+      height: max-content;
+      a {
+        height: fit-content;
+      }
+      margin: auto;
+      padding-top: 5vw;
+      display: flex;
+      align-items: center;
       @media screen and (aspect-ratio<1/1) {
         width: 95vw;
       }

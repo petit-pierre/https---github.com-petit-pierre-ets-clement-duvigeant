@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./deconnexion.css";
+import { Link } from "react-router-dom";
 
 export default function Deconnexion() {
   const [connected, setConnected] = useState(
@@ -33,8 +34,9 @@ export default function Deconnexion() {
   if (!connected) return null;
 
   return (
-    <button onClick={disconnect} className="disconnect-button">
-      Deconnexion
-    </button>
+    <div className="disconnect-button">
+      <Link to="./change_password">Modifier le Mot de Passe</Link>
+      <button onClick={disconnect}>Deconnexion</button>
+    </div>
   );
 }

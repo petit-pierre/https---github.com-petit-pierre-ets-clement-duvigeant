@@ -37,6 +37,8 @@ function Header() {
     if (!document.querySelector(".cgv").className.includes("hidden")) {
       document.querySelector(".content").classList.remove("hidden");
       document.querySelector(".accueilContent").classList.remove("hidden");
+      document.querySelector(".test").classList.remove("hidden");
+      document.querySelector(".Caroussel").classList.remove("hidden");
       document.querySelector(".cgv").classList.add("hidden");
     }
     const links = document.querySelectorAll(".active");
@@ -57,6 +59,8 @@ function Header() {
     if (!document.querySelector(".cgv").className.includes("hidden")) {
       document.querySelector(".content").classList.remove("hidden");
       document.querySelector(".accueilContent").classList.remove("hidden");
+      document.querySelector(".test").classList.remove("hidden");
+      document.querySelector(".Caroussel").classList.remove("hidden");
       document.querySelector(".cgv").classList.add("hidden");
     }
     const links = document.querySelectorAll(".active");

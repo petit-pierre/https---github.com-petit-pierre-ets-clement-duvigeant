@@ -8,15 +8,19 @@ function Footer() {
     ) {
       document.querySelector(".content").classList.add("hidden");
       document.querySelector(".accueilContent").classList.add("hidden");
+      document.querySelector(".test").classList.add("hidden");
+      document.querySelector(".Caroussel").classList.add("hidden");
       document.querySelector(".cgv").classList.remove("hidden");
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        // behavior: "smooth",
       });
     } else {
       document.querySelector(".cgv").classList.add("hidden");
       document.querySelector(".content").classList.remove("hidden");
       document.querySelector(".accueilContent").classList.remove("hidden");
+      document.querySelector(".test").classList.remove("hidden");
+      document.querySelector(".Caroussel").classList.remove("hidden");
     }
 
     const links = document.querySelectorAll(".active");

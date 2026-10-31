@@ -13,11 +13,19 @@ export default function ChangeText({
 }) {
   const [content, setContent] = useState("");
   const navigate = useNavigate();
+
+  // État pour forcer le re-rendu à chaque transaction de l'éditeur
+  const [, setForceUpdate] = useState({});
+
   const editor = useEditor({
     extensions: [StarterKit],
     content: placeholder,
     onUpdate: ({ editor }) => {
       setContent(editor.getHTML());
+    },
+    onTransaction: () => {
+      // Se déclenche à chaque changement d'état (sélection, frappe, formatage)
+      setForceUpdate({});
     },
   });
 
@@ -37,8 +45,6 @@ export default function ChangeText({
     if (id) formData.append("id", id);
     else formData.append("id", "-1");
 
-    // console.log(formData);
-
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/content/`, {
         method: "POST",
@@ -56,8 +62,6 @@ export default function ChangeText({
       }
 
       addMessage("Contenu sauvegardé avec succes!");
-
-      //console.log(data);
     } catch (error: any) {
       localStorage.removeItem("token");
       navigate("/login", {
@@ -76,6 +80,7 @@ export default function ChangeText({
         <button
           type="button"
           onClick={() => editor.chain().focus().toggleBold().run()}
+          className={editor.isActive("bold") ? "active" : ""}
         >
           Gras
         </button>
@@ -83,6 +88,7 @@ export default function ChangeText({
         <button
           type="button"
           onClick={() => editor.chain().focus().toggleItalic().run()}
+          className={editor.isActive("italic") ? "active" : ""}
         >
           Italique
         </button>
@@ -92,6 +98,7 @@ export default function ChangeText({
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
+          className={editor.isActive("heading", { level: 2 }) ? "active" : ""}
         >
           Titre 1
         </button>
@@ -101,6 +108,7 @@ export default function ChangeText({
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 3 }).run()
           }
+          className={editor.isActive("heading", { level: 3 }) ? "active" : ""}
         >
           Titre 2
         </button>
@@ -108,6 +116,7 @@ export default function ChangeText({
         <button
           type="button"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
+          className={editor.isActive("bulletList") ? "active" : ""}
         >
           Liste
         </button>

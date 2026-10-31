@@ -13,6 +13,8 @@ import HomeSlider from "../../components/HomeSlider";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Deconnexion from "../../components/Deconnexion";
+import PhotoSlider from "../../components/PhotoSlider";
+import { useContent } from "../../contexts/ContentContext";
 
 function Home() {
   const [message, setMessage] = useState([]);
@@ -107,6 +109,54 @@ function Home() {
     observerAccueil.observe(accueil.current);
   }, []);
 
+  const { slider } = useContent() ?? {};
+
+  const sliders = slider?.map((photo) => ({
+    ...photo,
+    url: `${import.meta.env.VITE_API_URL}/uploads/photos/${photo.name}`,
+  })) ?? [
+    {
+      id: 1,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/1.png",
+      location: "slider",
+    },
+    {
+      id: 2,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/2.png",
+      location: "slider",
+    },
+    {
+      id: 3,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/3.png",
+      location: "slider",
+    },
+    {
+      id: 4,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/4.png",
+      location: "slider",
+    },
+    {
+      id: 5,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/5.png",
+      location: "slider",
+    },
+    {
+      id: 6,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/6.png",
+      location: "slider",
+    },
+    {
+      id: 7,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/7.png",
+      location: "slider",
+    },
+    {
+      id: 8,
+      url: "https://l-araignee.net/ets-clement-duvigeant/assets/slider/8.png",
+      location: "slider",
+    },
+  ];
+
   return (
     <main>
       <Header></Header>
@@ -122,8 +172,12 @@ function Home() {
         <span id="acceuil" className="id"></span>
         <span className="observer" ref={accueil}></span>
       </div>
+
       <div className="accueilContent">
         <Accueil addMessage={addMessage}></Accueil>
+      </div>
+      <div className="test">
+        <HomeSlider />
       </div>
       <div className="home">
         <div className="content">
@@ -161,9 +215,6 @@ function Home() {
           <div className="section">
             <Vmc addMessage={addMessage}></Vmc>
           </div>
-          <div className="test">
-            <HomeSlider />
-          </div>
         </div>
 
         <div className="cgv hidden">
@@ -172,6 +223,9 @@ function Home() {
           </div>
           <Cgv addMessage={addMessage}></Cgv>
         </div>
+      </div>
+      <div className="Caroussel">
+        <PhotoSlider sliders={sliders} addMessage={addMessage}></PhotoSlider>
       </div>
       <Footer></Footer>
       <Deconnexion></Deconnexion>
